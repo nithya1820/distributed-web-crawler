@@ -45,6 +45,13 @@ python -m crawler.crawler --start-url https://example.com --max-pages 100
    - **macOS**: `brew install redis`
    - **Linux**: `sudo apt-get install redis-server`
 
+   **Alternatively, you can run Redis using Docker (recommended if you cannot install Redis locally):**
+   ```bash
+   docker pull redis:latest
+   docker run -d -p 6379:6379 --name redis-server redis:latest
+   ```
+   This will start a Redis server accessible at `localhost:6379`.
+
 2. Clone the repository and install dependencies:
 ```bash
 git clone <repository-url>
