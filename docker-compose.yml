@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:6.2.6
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+
+  memcached:
+    image: memcached:1.6.22
+    ports:
+      - "11211:11211"
+    volumes:
+      - memcached_data:/data
+
+volumes:
+  redis_data:
+  memcached_data:
